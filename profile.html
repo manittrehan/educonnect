@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduConnects - Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./public/css/profile.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="public/js/profile.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/v82_34.png" alt="Logo">
+      <div class="logo-text">EduConnects</div>
+    </div>
+    <nav>
+      <a id="home" href="lander.html">Home</a>
+      <a id="lectures" href="#" onclick="showSubjects('lectures')">Courses</a>
+      <a id="profile" href="#" onclick="showProfile()">Profile</a>
+      <a id="support" href="#" onclick="showSupport()">Support</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="sidebar">
+      <div class="profile-section">
+        <img src="images/v13_89.png" alt="User Image">
+        <h3>Aparna Singh</h3>
+        <p>Student</p>
+      </div>
+      <ul class="nav-links">
+        <li onclick="showProfile()">Profile</a></li>
+        <li onclick="showSubjects()">Courses</a></li>
+        <li onclick="showAbout()">About</a></li>
+        <li onclick="showFeedback()">Feedback</a></li>
+        <li onclick="showSupport()">Support</a></li>
+      </ul>
+    </div>
+
+    <main class="content">
+      <!-- Breadcrumb navigation -->
+      <div id="breadcrumb"></div>
+
+      <!-- Dynamic content container -->
+      <div id="dynamicContent"></div>
+
+      <!-- Profile content - will be shown/hidden dynamically -->
+      <div id="profileContent">
+        <div class="header-banner">
+          <img src="images/v13_89.png" alt="User Image">
+          <div>
+            <h2>Aparna Singh</h2>
+            <p>Student</p>
+          </div>
+        </div>
+
+        <h1>Report</h1>
+
+        <div class="report-section">
+          <div class="performance-chart">
+            <h4>Performance</h4>
+            <canvas id="performanceChart" class="chart"></canvas>
+          </div>
+
+          <div class="performance-chart">
+            <h4>Comparison with Peers</h4>
+            <canvas id="comparisonChart" class="chart"></canvas>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="stat-card">
+            <h4>Questions Attempted</h4>
+            <p id="questionsAttempted">50</p>
+          </div>
+          <div class="stat-card">
+            <h4>Correct Answers</h4>
+            <p id="correctAnswers">28</p>
+          </div>
+          <div class="stat-card">
+            <h4>Incorrect Answers</h4>
+            <p id="incorrectAnswers">22</p>
+          </div>
+          <div class="stat-card">
+            <h4>Papers Solved</h4>
+            <p id="papersSolved">5</p>
+          </div>
+        </div>
+        <div class="report-section">
+          <div class="performance-chart">
+            <h4>Course Progress</h4>
+            <canvas id="courseProgressChart" class="chart"></canvas>
+          </div>
+          <div class="performance-chart">
+            <h4>Your Progress</h4>
+            <canvas id="courseProgressChart2" class="chart"></canvas>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+<script>
+  const performanceData = {
+    labels: ['Attempted', 'Correct', 'Incorrect'],
+    datasets: [{
+      label: 'Performance Stats',
+      data: [50, 28, 22],
+      backgroundColor: [
+        'rgba(54, 162, 235, 0.5)',
+        'rgba(75, 192, 192, 0.5)',
+        'rgba(255, 99, 132, 0.5)'
+      ],
+      borderColor: [
+        'rgba(54, 162, 235, 1)',
+        'rgba(75, 192, 192, 1)',
+        'rgba(255, 99, 132, 1)'
+      ],
+      borderWidth: 1
+    }]
+  };
+  const performanceConfig = {
+    type: 'bar',
+    data: performanceData,
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          display: false
+        },
+        title: {
+          display: true,
+          text: 'Your Performance'
+        }
+      },
+      animation: {
+        duration: 1000
+      }
+    }
+  };
+
+
+  const performanceChart = new Chart(
+    document.getElementById('performanceChart'),
+    performanceConfig
+  );
+
+  // Data for Peer Comparison
+  const comparisonData = {
+    labels: ['You', 'Manit', 'Shuvam', 'Kushagra'],
+    datasets: [{
+      label: 'Comparison',
+      data: [28, 34, 30, 32],
+      backgroundColor: 'rgba(153, 102, 255, 0.5)',
+      borderColor: 'rgba(153, 102, 255, 1)',
+      borderWidth: 1
+    }]
+  };
+
+  const comparisonConfig = {
+    type: 'bar',
+    data: comparisonData,
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          display: false
+        },
+        title: {
+          display: true,
+          text: 'Comparison with Peers'
+        }
+      },
+      animation: {
+        duration: 1000
+      }
+    }
+  };
+  const comparisonChart = new Chart(
+    document.getElementById('comparisonChart'),
+    comparisonConfig
+  );
+
+  const courseProgressData = {
+    labels: ['Physics', 'Maths', 'Chemistry', 'English', 'Computer Science'],
+    datasets: [{
+      label: 'Progress',
+      data: [90, 75, 60, 45, 30],
+      backgroundColor: 'rgba(255, 205, 86, 0.5)',
+      borderColor: 'rgba(255, 205, 86, 1)',
+      borderWidth: 1
+    }]
+  };
+
+  const courseProgressConfig = {
+    type: 'doughnut',
+    data: courseProgressData,
+    options: {
+      responsive: true,
+      plugins: {
+        title: {
+          display: true,
+          text: 'Course Progress'
+        }
+      },
+      animation: {
+        duration: 1000
+      }
+    }
+  };
+
+  const courseProgressChart = new Chart(
+    document.getElementById('courseProgressChart'),
+    courseProgressConfig
+  );
+  const courseProgressData2 = {
+    labels: ['Physics', 'Maths', 'Chemistry', 'English', 'Computer Science'],
+    datasets: [{
+      label: 'Progress',
+      data: [90, 75, 60, 45, 30],
+      backgroundColor: [
+        'rgb(255, 99, 132)',
+        'rgb(75, 192, 192)',
+        'rgb(255, 205, 86)',
+        'rgb(201, 203, 207)',
+        'rgb(54, 162, 235)'
+      ],
+      borderColor: 'rgba(255, 205, 86, 1)',
+      borderWidth: 1
+    }]
+  };
+  const courseProgressConfig2 = {
+    type: 'polarArea',
+    data: courseProgressData2,
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'top',
+        },
+        title: {
+          display: true,
+          text: 'Your Progress'
+        },
+        animation: {
+          duration: 1000
+        }
+      }
+    },
+  };
+  const courseProgressChart2 = new Chart(
+    document.getElementById('courseProgressChart2'),
+    courseProgressConfig2
+  )
+  function showProfile() {
+    document.getElementById('profileContent').style.display = 'block';
+    document.getElementById('dynamicContent').style.display = 'none';
+    updateBreadcrumb(['Profile']);
+  }
+
+  function showSubjects(type = 'notes') {
+    document.getElementById('profileContent').style.display = 'none';
+    document.getElementById('dynamicContent').style.display = 'block';
+    fetchSubjectData().then(renderSubjects);
+    updateBreadcrumb(['Subjects']);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // Show profile by default
+    showProfile();
+  });
+</script>
+
+</html>
+
+

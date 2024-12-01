@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduConnects - Courses</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-color: #0D0B21;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+        }
+
+        header {
+            background: linear-gradient(90deg, #7900C3, #590090, #000000);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        header nav li {
+            margin-left: 20px;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: #fff;
+            display: flex;
+            align-items: center;
+        }
+
+        header nav img {
+            margin-right: 5px;
+        }
+
+        aside {
+            width: 25%; 
+            background-color: #280080;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .profile img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        aside nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        aside nav li {
+            margin-bottom: 10px;
+        }
+
+        aside nav a {
+            text-decoration: none;
+            color: #fff;
+            display: flex;
+            align-items: center;
+        }
+
+        aside nav img {
+            margin-right: 5px;
+        }
+
+    
+        .courses {
+            width: 75%; 
+            padding: 20px;
+        }
+
+        .courses h2 {
+            margin-top: 0;
+        }
+
+        .courses ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .courses li {
+            margin-bottom: 10px;
+        }
+
+        .box {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #202020;
+        }
+
+        .course-box {
+            border: 1px solid #ccc;
+            border-radius: 24px;
+            padding: 10px;
+            margin-bottom: 10px;
+            color: white;
+            background-color: #15132B;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>EduConnects</h1>
+            <nav>
+                <ul>
+                    <li><a href="#"><img src="img1.png" alt="Home"></a></li>
+                    <li><a href="#"><img src="img2.png" alt="Lectures"></a></li>
+                    <li><a href="#"><img src="img3.png" alt="Notes"></a></li>
+                    <li><a href="#"><img src="img4.png" alt="Profile"></a></li>
+                    <li><a href="#"><img src="img5.png" alt="Support"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <aside>
+                <div class="box profile">
+                    <img src="profile.jpg" alt="Profile Picture">
+                    <h2>Aparna Singh</h2>
+                    <p>Student</p>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#"><img src="img6.png" > Profile</a></li>
+                        <li><a href="#"><img src="img7.png" > Courses</a></li>
+                        <!-- <li><a href="#"><img src="img8.png" > Lectures</a></li>
+                        <li><a href="#"><img src="img9.png" > Notes</a></li> -->
+                        <li><a href="#"><img src="img10.png" > About</a></li>
+                        <li><a href="#"><img src="img11.png" > Feedback</a></li>
+                        <li><a href="#"><img src="img12.png" > Support</a></li>
+                        
+                    </ul>
+                </nav>
+            </aside>
+            <div class="courses">
+                <h2>Courses</h2>
+                <ul>
+                    <li><a href="#"><div class="course-box">Course 1</div></a></li>
+                    <li><a href="#"><div class="course-box">Course 2</div></a></li>
+                    <li><a href="#"><div class="course-box">Course 3</div></a></li>
+                    <li><a href="#"><div class="course-box">Course 4</div></a></li>
+                    <li><a href="#"><div class="course-box">Course 5</div></a></li>
+                    <li><a href="#"><div class="course-box">Course 6</div></a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

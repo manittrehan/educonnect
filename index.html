@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduConnects</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #0D0B21;
+            color: white;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background: linear-gradient(90deg, #7900C3, #590090, #000000);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            z-index: 1000;
+            margin: 0;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: left;
+        }
+
+        .logo {
+            width: 60px;
+            height: 58.34px;
+            margin-right: 10px;
+        }
+
+        h1 {
+            font-size: 48px;
+            background: linear-gradient(90deg, white, grey);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            max-width: 100%;
+            padding: 100px;
+        }
+
+        .welcome-section {
+            width: 50%;
+            text-align: left;
+        }
+
+        h2 {
+            font-size: 80px;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        p {
+            font-size: 30px;
+            color: #b0b0b0;
+        }
+
+        .login-section {
+            width: 40%;
+            background-color: #1a1a1a;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .login-form h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: none;
+            background-color: white;
+            color: black;
+            font-size: 16px;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #7c4dff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background-color: #651fff;
+        }
+
+        .create-account {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #b0b0b0;
+        }
+
+        .create-account a {
+            color: goldenrod;
+            text-decoration: none;
+        }
+
+        .create-account a:hover {
+            text-decoration: underline;
+        }
+
+        /* Simple box for show/hide password */
+        .show-password-container {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .show-password-container input {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="images/v13_102.png" alt="EduConnects Logo" class="logo">
+            <h1>EduConnects</h1>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="welcome-section">
+            <h2>Welcome to Edu<span style="color: #9E00FF;">Connects!</span></h2>
+            <p>We're dedicated to enhancing education by connecting students, educators, and resources. Explore our
+                platform to find tools, resources, and networks designed to support and inspire your learning journey.
+                Join us in shaping the future of education!</p>
+        </div>
+
+        <div class="login-section">
+            <form class="login-form">
+                <h3>Sign In</h3>
+                <input type="text" placeholder="Username" class="input-field">
+                <input type="password" placeholder="Password" class="input-field" id="password">
+                <div class="show-password-container">
+                    <input type="checkbox" id="show-password" onclick="togglePassword()">
+                    <label for="show-password" style="color: #b0b0b0;">Show Password</label>
+                </div>
+                <button type="button" class="login-btn">Login</button>
+                <p class="create-account">Not a member? <a href="#"><span>Create Account</span></a></p>
+            </form>
+        </div>
+    </main>
+
+    <script src="./public/index.js"> 
+    </script>
+
+</body>
+
+</html>
