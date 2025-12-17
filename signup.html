@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduConnects - Sign Up</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 3L21 7.5L12 12L3 7.5L12 3Z" fill="#9B00FF" />
+            <path d="M5.25 9.2V15.1C5.25 16.45 8.4 18.5 12 18.5C15.6 18.5 18.75 16.45 18.75 15.1V9.2L12 12.5L5.25 9.2Z" fill="#6F00C8" />
+          </svg>
+        </div>
+        <div class="brand-name">EduConnects</div>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="shell" aria-label="Sign Up">
+        <div class="left">
+          <h1 class="headline">
+            <span>Welcome</span>
+            <span>to <span class="accent">EduConnects</span>!</span>
+          </h1>
+
+          <p class="subtitle">
+            We're dedicated to enhancing education by connecting students, educators, and resources.
+            Explore our platform to find tools, resources, and networks designed to support and inspire
+            your learning journey. Join us in shaping the future of education!
+          </p>
+        </div>
+
+        <div class="divider" aria-hidden="true"></div>
+
+        <div class="right">
+          <div class="signin-header">
+            <div class="signin-rule" aria-hidden="true"></div>
+            <div class="signin-center">
+              <div class="user-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 12.25C9.37665 12.25 7.25 10.1234 7.25 7.5C7.25 4.87665 9.37665 2.75 12 2.75C14.6234 2.75 16.75 4.87665 16.75 7.5C16.75 10.1234 14.6234 12.25 12 12.25Z" fill="#E8E8EF" />
+                  <path d="M4.5 21.25C4.5 17.384 7.634 14.25 11.5 14.25H12.5C16.366 14.25 19.5 17.384 19.5 21.25V21.5H4.5V21.25Z" fill="#E8E8EF" />
+                </svg>
+              </div>
+              <div class="signin-title">SIGN UP</div>
+            </div>
+            <div class="signin-rule" aria-hidden="true"></div>
+          </div>
+
+          <form class="form" id="signupForm" autocomplete="on">
+            <input class="field" name="username" type="text" placeholder="CREATE USERNAME" autocomplete="username" />
+            <input class="field" name="password" type="password" placeholder="CREATE PASSWORD" autocomplete="new-password" />
+
+            <button class="btn" type="submit">SIGN UP</button>
+
+            <div class="signup">
+              <span class="signup-muted">ALREADY A USER?</span>
+              <a class="signup-link" href="index.html" id="signInLink">SIGN IN</a>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduConnects</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar topbar--landing">
+      <div class="topbar-inner">
+        <div class="brand">
+          <div class="brand-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 3L21 7.5L12 12L3 7.5L12 3Z" fill="#9B00FF" />
+              <path d="M5.25 9.2V15.1C5.25 16.45 8.4 18.5 12 18.5C15.6 18.5 18.75 16.45 18.75 15.1V9.2L12 12.5L5.25 9.2Z" fill="#6F00C8" />
+            </svg>
+          </div>
+          <div class="brand-name">EduConnects</div>
+        </div>
+
+        <nav class="nav">
+          <a class="nav-link" href="landing.html">Home</a>
+          <a class="nav-link" href="lectures.html" id="navLecture">Lecture</a>
+          <a class="nav-link" href="#" id="navNotes">Notes</a>
+          <a class="nav-link" href="contact.html" id="navSupport">Support</a>
+          <a class="nav-link nav-link--pill" href="index.html">Sign In</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="landing">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-left">
+            <h1 class="hero-title">
+              <span>Welcome</span>
+              <span>to <span class="accent">EduConnects</span>!</span>
+            </h1>
+            <p class="hero-subtitle">
+              We're dedicated to enhancing education by connecting students, educators, and resources.
+              Explore our platform to find tools, resources, and networks designed to support and inspire your learning journey.
+              Join us in shaping the future of education!
+            </p>
+            <div class="hero-actions">
+              <a class="hero-btn" href="signup.html">Get Started</a>
+              <a class="hero-btn hero-btn--ghost" href="#features">Explore</a>
+            </div>
+          </div>
+
+          <div class="hero-right" aria-hidden="true">
+            <div class="hero-illustration">
+              <svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#8b00ff" stop-opacity="0.95" />
+                    <stop offset="1" stop-color="#2b0c54" stop-opacity="0.2" />
+                  </linearGradient>
+                  <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#ffccff" stop-opacity="0.55" />
+                    <stop offset="1" stop-color="#8b00ff" stop-opacity="0.2" />
+                  </linearGradient>
+                  <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="12" />
+                  </filter>
+                </defs>
+
+                <circle cx="470" cy="70" r="56" fill="url(#g2)" filter="url(#blur)" />
+                <circle cx="490" cy="125" r="22" fill="#8b00ff" opacity="0.7" />
+                <circle cx="70" cy="260" r="64" fill="url(#g1)" filter="url(#blur)" />
+
+                <path d="M125 250c20-46 78-78 156-78 84 0 150 36 166 86" fill="none" stroke="#ffccff" stroke-opacity="0.35" stroke-width="8" />
+                <path d="M147 250c18-35 66-58 130-58 71 0 125 26 142 64" fill="none" stroke="#8b00ff" stroke-opacity="0.55" stroke-width="10" />
+
+                <rect x="190" y="118" width="240" height="170" rx="18" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.18)" />
+                <rect x="210" y="144" width="200" height="14" rx="7" fill="rgba(255,255,255,0.30)" />
+                <rect x="210" y="170" width="160" height="12" rx="6" fill="rgba(255,255,255,0.22)" />
+                <rect x="210" y="194" width="190" height="12" rx="6" fill="rgba(255,255,255,0.20)" />
+                <rect x="210" y="220" width="120" height="12" rx="6" fill="rgba(255,255,255,0.18)" />
+                <rect x="210" y="248" width="170" height="14" rx="7" fill="#8b00ff" opacity="0.9" />
+
+                <path d="M350 88l56 24-56 26-56-26 56-24z" fill="#8b00ff" opacity="0.85" />
+                <path d="M314 114v40c0 9 16 17 36 17s36-8 36-17v-40l-36 17-36-17z" fill="#6f00c8" opacity="0.95" />
+
+                <g opacity="0.8">
+                  <path d="M456 210l16-10 10 16-16 10-10-16z" fill="#ffccff" />
+                  <path d="M442 246l10-6 6 10-10 6-6-10z" fill="#8b00ff" />
+                  <path d="M112 112l12-8 8 12-12 8-8-12z" fill="#ffccff" />
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="features">
+        <div class="container">
+          <div class="grid-2">
+            <div class="card card--image">
+              <div class="mock-img mock-img--typing"></div>
+            </div>
+
+            <div class="card">
+              <h3 class="card-title">Personalized Learning Experience</h3>
+              <div class="card-divider"></div>
+              <div class="card-list">
+                <div class="card-item">
+                  <div class="dot"></div>
+                  <div>
+                    <div class="item-title">Engaging Content</div>
+                    <div class="item-desc">Interactive resources and curated study material.</div>
+                  </div>
+                </div>
+                <div class="card-item">
+                  <div class="dot"></div>
+                  <div>
+                    <div class="item-title">Diverse Course Selection</div>
+                    <div class="item-desc">Topics for students and educators across levels.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3 class="card-title">Search Functionality</h3>
+              <p class="card-text">Find courses and resources quickly with smart search.</p>
+
+              <h3 class="card-title" style="margin-top:16px">Social Media Integration</h3>
+              <p class="card-text">Share progress, follow communities, and learn together.</p>
+
+              <h3 class="card-title" style="margin-top:16px">SEO Optimization</h3>
+              <p class="card-text">Discover content easily and keep learning accessible.</p>
+            </div>
+
+            <div class="card card--image">
+              <div class="mock-img mock-img--supplies"></div>
+            </div>
+          </div>
+
+          <div class="split">
+            <div class="split-left">
+              <h2 class="section-title">Transform Your Learning Experience with Our Expert Resources</h2>
+              <p class="section-text">
+                EduConnects brings together tools, resources, and a supportive network to help you stay organized and motivated.
+                Learn with clarity, track goals, and access curated content designed to help you succeed.
+              </p>
+            </div>
+
+            <div class="split-right">
+              <div class="cta">
+                <div class="cta-title">Sign Up</div>
+                <div class="cta-text">Create your account and start learning today.</div>
+                <a class="cta-btn" href="signup.html">Start Now</a>
+              </div>
+
+              <div class="cta cta--soft">
+                <div class="cta-title">Learn at Your Own Pace</div>
+                <div class="cta-text">Build a routine that works for you with guided content.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="testimonials">
+        <div class="container">
+          <h2 class="section-title section-title--center">Testimonials</h2>
+
+          <div class="test-grid">
+            <div class="t-card">
+              <div class="t-head">
+                <div class="avatar">A</div>
+                <div>
+                  <div class="t-name">Ayesha Malik</div>
+                  <div class="t-role">Student</div>
+                </div>
+              </div>
+              <div class="t-text">EduConnects helped me stay consistent and find great resources fast.</div>
+            </div>
+
+            <div class="t-card">
+              <div class="t-head">
+                <div class="avatar">R</div>
+                <div>
+                  <div class="t-name">Rohan Verma</div>
+                  <div class="t-role">Learner</div>
+                </div>
+              </div>
+              <div class="t-text">The personalized content and clean layout make learning enjoyable.</div>
+            </div>
+
+            <div class="t-card">
+              <div class="t-head">
+                <div class="avatar">S</div>
+                <div>
+                  <div class="t-name">Sara Khan</div>
+                  <div class="t-role">Educator</div>
+                </div>
+              </div>
+              <div class="t-text">A great place to share resources and connect with students and teachers.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container">
+          <h2 class="section-title section-title--center">Contact Us</h2>
+          <p class="section-text section-text--center">We'd love to hear from you! Reach out to us for any inquiries or feedback.</p>
+
+          <div class="contact-grid">
+            <div class="contact-card">
+              <div class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                  <path d="M4 6.5l8 6 8-6" stroke="rgba(233,233,239,0.92)" stroke-width="2" stroke-linecap="round" />
+                  <path d="M4.5 7.5h15A2.5 2.5 0 0 1 22 10v8a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18v-8A2.5 2.5 0 0 1 4.5 7.5z" stroke="rgba(233,233,239,0.62)" stroke-width="2" />
+                </svg>
+              </div>
+              <div class="contact-title">Email</div>
+              <div class="contact-text">info@educonnects.com</div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                  <path d="M7 3h3l1 5-2 1.5c1 2.8 3.2 5 6 6L16.5 14l5 1v3c0 1.1-.9 2-2 2C10.8 20 4 13.2 4 4c0-1.1.9-2 2-2z" fill="rgba(233,233,239,0.78)" />
+                </svg>
+              </div>
+              <div class="contact-title">Phone</div>
+              <div class="contact-text">+91-000-000-0000</div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                  <path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11z" fill="rgba(155,0,255,0.8)" />
+                  <circle cx="12" cy="10" r="2.6" fill="rgba(233,233,239,0.92)" />
+                </svg>
+              </div>
+              <div class="contact-title">Office</div>
+              <div class="contact-text">Your City, Your State</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container footer-inner">
+          <div class="footer-left">
+            <div class="footer-brand">EduConnects</div>
+            <div class="footer-sub">Connecting education, resources, and people.</div>
+          </div>
+          <div class="footer-right">
+            <a class="social" href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                <rect x="5" y="5" width="14" height="14" rx="4" stroke="rgba(233,233,239,0.7)" stroke-width="2" />
+                <circle cx="12" cy="12" r="3" stroke="rgba(233,233,239,0.7)" stroke-width="2" />
+                <circle cx="16.8" cy="7.2" r="1" fill="rgba(233,233,239,0.7)" />
+              </svg>
+            </a>
+            <a class="social" href="#" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                <path d="M20 7c-.6.3-1.3.5-2 .6.7-.5 1.2-1.2 1.4-2.1-.7.4-1.5.8-2.3.9A3.2 3.2 0 0 0 11.6 9c0 .3 0 .6.1.9-3.2-.2-6-1.8-7.9-4.4-.3.6-.4 1.2-.4 2 0 1.1.6 2.2 1.5 2.8-.5 0-1-.2-1.5-.4v.1c0 1.7 1.2 3.1 2.8 3.4-.3.1-.7.1-1 .1-.2 0-.5 0-.7-.1.5 1.5 2 2.6 3.6 2.6A6.5 6.5 0 0 1 4 17.6 9.2 9.2 0 0 0 9 19c6 0 9.3-5.2 9.3-9.7v-.4c.7-.5 1.2-1.1 1.7-1.8z" fill="rgba(233,233,239,0.7)" />
+              </svg>
+            </a>
+            <a class="social" href="#" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                <path d="M21 12s0-3.5-.4-4.8c-.2-.7-.7-1.2-1.4-1.4C17.9 5.5 12 5.5 12 5.5s-5.9 0-7.2.3c-.7.2-1.2.7-1.4 1.4C3 8.5 3 12 3 12s0 3.5.4 4.8c.2.7.7 1.2 1.4 1.4 1.3.3 7.2.3 7.2.3s5.9 0 7.2-.3c.7-.2 1.2-.7 1.4-1.4.4-1.3.4-4.8.4-4.8z" fill="rgba(233,233,239,0.55)" />
+                <path d="M10.25 9.6v4.8l4.2-2.4-4.2-2.4z" fill="#0b0715" opacity="0.85" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
